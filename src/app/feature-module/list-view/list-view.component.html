@@ -1,0 +1,24 @@
+<p-table [value]="sampleData" [paginator]="true" [rows]="10" [responsive]="true">
+    <ng-template pTemplate="caption">
+        Issue Status
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Track ID</th>
+            <th>Title</th>
+            <th>Created Date</th>
+            <th>Last Update</th>
+            <th>Status <p-sortIcon></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.createdData}}</td>
+            <td>{{data.lasUpdate}}</td>
+            <td>{{data.status}}</td>
+        </tr>
+    </ng-template>
+</p-table>

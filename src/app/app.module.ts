@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductService } from './core-module/services/product.service';
 import { ReactiveFormsModule } from "@angular/forms";
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
@@ -20,7 +19,11 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { SideNavComponent } from './block-module/side-nav/side-nav.component';
-import {SidebarModule} from 'primeng/sidebar';
+import { SidebarModule } from 'primeng/sidebar';
+import { TableModule } from 'primeng/table';
+import { CodeHighlighterModule } from 'primeng/codehighlighter';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { HelpDeskFeatureModule } from './feature-module/feature.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,7 @@ import {SidebarModule} from 'primeng/sidebar';
     CountriesListComponent,
     HomeComponent,
     ToolBarComponent,
-    SideNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +48,13 @@ import {SidebarModule} from 'primeng/sidebar';
     FileUploadModule,
     ToastModule,
     CalendarModule,
-    SidebarModule
+    SidebarModule,
+    TableModule,
+    CodeHighlighterModule,
+    ContextMenuModule,
+    HelpDeskFeatureModule
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

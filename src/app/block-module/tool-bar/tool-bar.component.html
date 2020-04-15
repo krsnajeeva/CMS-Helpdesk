@@ -1,13 +1,31 @@
-<p-toolbar>
-    <div class="ui-toolbar-group-left">
-        <!-- <button pButton type="button" [disabled]="true" label="Submit"></button> -->
-        <!-- <button pButton type="button" label="Upload" icon="pi pi-upload" class="ui-button-success"></button> -->
-    </div>
-<h1>{{childmessage}}</h1>
-    <div class="ui-toolbar-group-right">
-        <button pButton type="button"  (ngSubmit)="submit()" label="New"></button>
-        <button pButton type="button" label="Inprogress" class="ui-button-warning"></button>
-        <button pButton type="button" label="Resolved" class="ui-button-success"></button>
-        <button pButton type="button" label="Reopen" class="ui-button-danger"></button>
-    </div>
-</p-toolbar>
+<div class="fixed-top">
+    <!-- <p-toolbar>
+        <div class="ui-toolbar-group-left">
+            <a class="navbar-brand" href="#">Navbar</a>
+
+        </div>
+        <div>
+        </div>
+        <div class="ui-toolbar-group-right">
+            <input class="form-control" formControlName="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button pButton type="button" label="Resolved" class="ui-button-success"></button>
+            <button pButton type="button" label="Reopen" class="ui-button-danger"></button>
+        </div>
+    </p-toolbar> -->
+    <nav class="navbar fixed-top">
+        <a class="navbar-brand" href="#">Bug Report Tool</a>
+        <form [formGroup]="form">
+            <div class="form-group row">
+
+                <div class="col-sm-8">
+                    <input class="form-control" formControlName="search" type="search" placeholder="Search"
+                        aria-label="Search">
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </nav>
+</div>

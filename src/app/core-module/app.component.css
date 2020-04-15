@@ -1,0 +1,26 @@
+.sidebar {
+    /* position: fixed;
+    width: 200px;
+    height: 400px;
+    background: #000;
+     */
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    margin-top: 70px;
+}
+.content {
+    margin-left: 250px;
+    margin-top: 70px;
+    height: auto;
+    width: auto;
+    position: relative;
+    background: #fff;
+    overflow: auto;
+    z-index: 1;
+}

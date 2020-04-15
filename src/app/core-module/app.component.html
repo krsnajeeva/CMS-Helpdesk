@@ -1,7 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div >
-   <app-side-nav></app-side-nav>
-   <!-- <app-tool-bar></app-tool-bar> -->
-   <!-- <app-home></app-home> -->
+<div>
+   <div class="fixed-top">
+      <app-tool-bar></app-tool-bar>
+   </div>
+
+   <div class="sidebar">
+      <app-side-nav></app-side-nav>
+   </div>
+
+   <div class="content">
+      <!-- <app-home></app-home> -->
+     <app-list-view></app-list-view>
+   </div>
 </div>
 <router-outlet></router-outlet>

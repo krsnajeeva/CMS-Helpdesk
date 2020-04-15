@@ -1,5 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tool-bar',
@@ -7,18 +7,11 @@ import {MenuItem} from 'primeng/api';
   styleUrls: ['./tool-bar.component.css']
 })
 export class ToolBarComponent implements OnInit {
-  items: MenuItem[];
-  @Input() childmessage;
   constructor() { }
-    
+  form = new FormGroup({
+    search: new FormControl(),
+  })
   ngOnInit() {
-      this.items = [
-          {label: 'Angular.io', icon: 'pi pi-external-link', url: 'http://angular.io'},
-          {label: 'Theming', icon: 'pi pi-palette', routerLink: ['/theming']}
-      ];
   }
 
-  submit(){
-    alert(JSON.stringify(this.childmessage));
-  }
 }
